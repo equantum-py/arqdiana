@@ -971,3 +971,33 @@ h1,h2,h3,.hero-heading h1,.page-intro h1,.section-heading h2,.story-grid h2,.ser
 .diana-process{padding:110px 0}.diana-process-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #d2d8cf}.diana-process-grid>div{padding:25px 28px 0 0}.diana-process-grid span{font-size:10px;color:#879185}.diana-process-grid h3{font-size:23px;font-weight:500;margin:28px 0 10px}.diana-process-grid p{font-size:12px;color:#788176}
 @media(max-width:900px){.diana-hero{padding:42px 0 65px}.diana-hero-grid,.diana-feature-grid,.diana-course-grid{grid-template-columns:1fr;gap:38px}.diana-hero-copy h1{font-size:clamp(47px,12vw,72px);letter-spacing:-2.5px}.diana-hero-image{height:58vh;min-height:430px}.diana-service-grid{grid-template-columns:1fr 1fr}.diana-service-card:nth-child(2){border-right:0}.diana-service-card{border-bottom:1px solid #ccd4ca}.diana-project-images{grid-template-columns:1fr 1fr}.diana-project-images>div{height:380px}.diana-project-images>div:nth-child(2),.diana-project-images>div:nth-child(3){height:380px;margin-top:0}.diana-project-images>div:first-child{grid-column:1/-1}.diana-process-grid{grid-template-columns:1fr 1fr;gap:35px}.diana-feature-image{height:480px}}
 @media(max-width:640px){.shell{width:calc(100% - 36px)}.diana-hero{padding-top:30px}.diana-hero-copy h1{font-size:48px;line-height:.98}.diana-hero-copy>p{font-size:14px;margin:22px 0}.diana-actions{gap:14px}.diana-primary{width:100%;justify-content:space-between}.diana-secondary{font-size:11px}.diana-specialties{margin-top:28px}.diana-hero-image{min-height:390px;height:52vh}.diana-services,.diana-project-preview,.diana-process{padding:72px 0}.diana-section-heading{margin-bottom:32px}.diana-section-heading h2{font-size:39px}.diana-service-grid{grid-template-columns:1fr}.diana-service-card,.diana-service-card:nth-child(2){border-right:0;min-height:0;padding:24px 5px}.diana-service-card h3{margin:30px 0 10px}.diana-feature,.diana-course{padding:72px 0}.diana-feature-image{height:390px}.diana-project-head{display:block}.diana-project-images{display:block}.diana-project-images>div,.diana-project-images>div:nth-child(2),.diana-project-images>div:nth-child(3){height:340px;margin:0 0 15px}.diana-course-grid{gap:45px}.diana-course h2{font-size:40px}.diana-process-grid{grid-template-columns:1fr 1fr;gap:28px 15px}.diana-process-grid>div{padding-right:8px}}
+
+
+/* Subtle architectural blueprint texture */
+.diana-home{
+  position:relative;
+  background-color:#f8f7f3;
+  background-image:
+    linear-gradient(rgba(38,62,51,.028) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(38,62,51,.028) 1px,transparent 1px);
+  background-size:40px 40px;
+}
+.diana-home:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  opacity:.18;
+  background-repeat:repeat-y;
+  background-size:560px 560px;
+  background-position:calc(100% + 110px) 100px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='560' height='560' viewBox='0 0 560 560'%3E%3Cg fill='none' stroke='%23263e33' stroke-width='1'%3E%3Cpath d='M80 95h280v210H80zM80 185h110V95M190 305V185h170M245 185v120M360 130h75v175h-75M105 120h58v42h-58z'/%3E%3Cpath d='M62 78h316M62 322h316M63 70v260M378 70v260M52 95h20M52 305h20M80 64v20M360 64v20' stroke-dasharray='5 7'/%3E%3Cpath d='M105 185a45 45 0 0 1 45 45M245 220a38 38 0 0 0 38-38M360 225a42 42 0 0 1 42 42'/%3E%3Ccircle cx='448' cy='402' r='62'/%3E%3Ccircle cx='448' cy='402' r='43'/%3E%3Cpath d='M386 402h124M448 340v124M404 358l88 88M492 358l-88 88M92 405h235M92 430h185M92 455h210M92 480h145' stroke-dasharray='3 6'/%3E%3C/g%3E%3C/svg%3E");
+}
+.diana-home>section{position:relative;z-index:1}
+.diana-hero,.diana-services,.diana-project-preview,.diana-process{background:rgba(248,247,243,.86)}
+.diana-feature{background-color:rgba(233,238,229,.96)}
+.diana-course{background-color:#293f34}
+@media(max-width:640px){
+ .diana-home:before{opacity:.12;background-size:390px 390px;background-position:calc(100% + 120px) 60px}
+ .diana-home{background-size:28px 28px}
+}
