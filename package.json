@@ -1,8 +1,8 @@
 {
-  "name": "forma-studio",
+  "name": "arqdiana",
   "private": true,
   "version": "1.0.0",
-  "description": "Bilingual architecture and interior design studio website",
+  "description": "Sitio web de arquitectura de Arq. Diana G. Piñanez",
   "scripts": {
     "dev": "next dev --hostname 0.0.0.0",
     "build": "next build",
@@ -14,7 +14,7 @@
   "license": "ISC",
   "type": "module",
   "engines": {
-    "node": ">=22"
+    "node": "22.x"
   },
   "dependencies": {
     "@fontsource-variable/plus-jakarta-sans": "^5.3.0",
