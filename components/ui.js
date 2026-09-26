@@ -17,13 +17,13 @@ export function CallToAction({ locale, compact = false }) { const c = copy[local
 export function SiteFooter({ locale }) {
   const c = copy[locale];
   return <footer className="site-footer shell">
-    <div className="footer-intro"><div><Link href={`/${locale}`} aria-label="Forma Studio"><Brand /></Link><p className="footer-description">{c.footer.description}</p></div><span className="footer-kicker">{c.home.eyebrow}</span></div>
+    <div className="footer-intro"><div><Link href={`/${locale}`} aria-label="Arq. Diana G. Piñanez"><Brand /></Link><p className="footer-description">{c.footer.description}</p></div><span className="footer-kicker">{c.home.eyebrow}</span></div>
     <div className="footer-grid">
-      <div><h3>{c.footer.explore}</h3><nav aria-label={locale === 'en' ? 'Footer navigation' : 'Alt menü'}>{paths.slice(1).map((path, index) => <Link key={path} href={`/${locale}${path}`}>{c.nav[index + 1]}</Link>)}</nav></div>
-      <div><h3>{c.footer.find}</h3><p>{c.footer.location}</p><p className="footer-time">41°01′ N &nbsp; 28°58′ E</p></div>
-      <div className="footer-contact"><h3>{c.start}</h3><TextLink href={`/${locale}/contact`}>{locale === 'en' ? 'Tell us about your project' : 'Projenizi anlatın'}</TextLink></div>
-      <Link className="footer-note" href={`/${locale}/contact`}><ArrowRight size={28} strokeWidth={1} /><p>{locale === 'en' ? 'A fresh perspective is always a good place to start.' : 'Taze bir bakış, başlamak için her zaman iyi bir yerdir.'}</p></Link>
+      <div><h3>{c.footer.explore}</h3><nav aria-label={'Navegación del pie'}>{paths.slice(1).map((path, index) => <Link key={path} href={`/${locale}${path}`}>{c.nav[index + 1]}</Link>)}</nav></div>
+      <div><h3>{c.footer.find}</h3><p>{c.footer.location}</p></div>
+      <div className="footer-contact"><h3>{c.start}</h3><TextLink href={`/${locale}/contact`}>{'Contame sobre tu proyecto'}</TextLink></div>
+      <Link className="footer-note" href={`/${locale}/contact`}><ArrowRight size={28} strokeWidth={1} /><p>{'Tu proyecto puede empezar con una conversación.'}</p></Link>
     </div>
-    <div className="footer-bottom"><span>{c.footer.note}</span><Link href={`/${locale}/privacy`}>{c.footer.privacy}</Link><div><a href={sitePath('/en/')} hrefLang="en" lang="en">English</a><span>/</span><a href={sitePath('/tr/')} hrefLang="tr" lang="tr">Türkçe</a></div></div>
+    <div className="footer-bottom"><span>{c.footer.note}</span><Link href={`/${locale}/privacy`}>{c.footer.privacy}</Link></div>
   </footer>;
 }
