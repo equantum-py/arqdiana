@@ -7,7 +7,7 @@ import { SiteFooter } from '../../components/ui';
 import { copy, locales } from '../../lib/content';
 
 export function generateStaticParams() { return locales.map(locale => ({ locale })); }
-export async function generateMetadata({ params }) { const { locale } = await params; const c = copy[locale]; if (!c) return {}; return { title: 'Arq. Diana G. Piñanez', description: c.home.intro, applicationName: 'Arq. Diana G. Piñanez', icons: { icon: sitePath('/icon.svg') } }; }
+export async function generateMetadata({ params }) { const { locale } = await params; const c = copy[locale]; if (!c) return {}; return { title: { default: 'ARQ DIANA', template: '%s | ARQ DIANA' }, description: c.home.intro, applicationName: 'ARQ DIANA', icons: { icon: sitePath('/icon.svg'), shortcut: sitePath('/icon.svg'), apple: sitePath('/icon.svg') } }; }
 export default async function LocaleLayout({ children, params }) {
  const { locale } = await params;
  if (!locales.includes(locale)) notFound();
