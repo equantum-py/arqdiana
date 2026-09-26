@@ -979,10 +979,10 @@ h1,h2,h3,.hero-heading h1,.page-intro h1,.section-heading h2,.story-grid h2,.ser
  isolation:isolate;
  background-color:#f8f7f3;
  background-image:
-  linear-gradient(rgba(38,62,51,.045) 1px,transparent 1px),
-  linear-gradient(90deg,rgba(38,62,51,.045) 1px,transparent 1px),
-  linear-gradient(rgba(38,62,51,.018) 1px,transparent 1px),
-  linear-gradient(90deg,rgba(38,62,51,.018) 1px,transparent 1px);
+  linear-gradient(rgba(38,62,51,.022) 1px,transparent 1px),
+  linear-gradient(90deg,rgba(38,62,51,.022) 1px,transparent 1px),
+  linear-gradient(rgba(38,62,51,.009) 1px,transparent 1px),
+  linear-gradient(90deg,rgba(38,62,51,.009) 1px,transparent 1px);
  background-size:40px 40px,40px 40px,8px 8px,8px 8px;
 }
 .diana-home:before{
@@ -991,7 +991,7 @@ h1,h2,h3,.hero-heading h1,.page-intro h1,.section-heading h2,.story-grid h2,.ser
  z-index:0;
  inset:0;
  pointer-events:none;
- opacity:.23;
+ opacity:.10;
  background-size:760px 760px;
  background-repeat:repeat;
  background-position:center top;
@@ -1003,7 +1003,7 @@ h1,h2,h3,.hero-heading h1,.page-intro h1,.section-heading h2,.story-grid h2,.ser
  z-index:0;
  inset:0;
  pointer-events:none;
- opacity:.10;
+ opacity:.035;
  background-image:repeating-linear-gradient(25deg,transparent 0 95px,rgba(38,62,51,.3) 96px,transparent 97px 190px);
 }
 .diana-home>section{position:relative;z-index:1;background:transparent}
@@ -1013,6 +1013,6 @@ h1,h2,h3,.hero-heading h1,.page-intro h1,.section-heading h2,.story-grid h2,.ser
 .diana-home .diana-course>*{position:relative;z-index:1}
 @media(max-width:640px){
  .diana-home{background-size:32px 32px,32px 32px,8px 8px,8px 8px}
- .diana-home:before{opacity:.18;background-size:560px 560px}
- .diana-home:after{opacity:.07}
+ .diana-home:before{opacity:.075;background-size:560px 560px}
+ .diana-home:after{opacity:.025}
 }
