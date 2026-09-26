@@ -7,7 +7,7 @@ import { SiteFooter } from '../../components/ui';
 import { copy, locales } from '../../lib/content';
 
 export function generateStaticParams() { return locales.map(locale => ({ locale })); }
-export async function generateMetadata({ params }) { const { locale } = await params; const c = copy[locale]; if (!c) return {}; return { title: 'Forma Studio', description: c.home.intro, applicationName: 'Forma Studio', icons: { icon: sitePath('/icon.svg') } }; }
+export async function generateMetadata({ params }) { const { locale } = await params; const c = copy[locale]; if (!c) return {}; return { title: 'Arq. Diana G. Piñanez', description: c.home.intro, applicationName: 'Arq. Diana G. Piñanez', icons: { icon: sitePath('/icon.svg') } }; }
 export default async function LocaleLayout({ children, params }) {
  const { locale } = await params;
  if (!locales.includes(locale)) notFound();
