@@ -31,7 +31,7 @@ export default async function Home({ params }) {
   </section>
 
   <section className="shell diana-services">
-   <div className="diana-section-heading"><Eyebrow>SERVICIOS</Eyebrow><h2>¿Qué necesitás hacer?</h2><p>Empezamos por entender tu idea y te acompañamos con el servicio adecuado.</p></div>
+   <div className="diana-section-heading"><Eyebrow>SERVICIOS</Eyebrow><h2>Servicios de arquitectura</h2><p>Elegí lo que necesitás y conversemos directamente sobre tu proyecto.</p></div>
    <div className="diana-service-grid">{services.map(([Icon,title,text],i)=><Link href={`/${locale}/services#service-${i+1}`} className="diana-service-card" key={title}><div><span>0{i+1}</span><Icon size={25} strokeWidth={1.4}/></div><h3>{title}</h3><p>{text}</p><b>Ver servicio <ArrowRight size={16}/></b></Link>)}</div>
   </section>
 
@@ -48,7 +48,7 @@ export default async function Home({ params }) {
   </section>
 
   <section className="diana-course">
-   <div className="shell diana-course-grid"><div><Eyebrow light>CURSO DE DISEÑO MOBILIARIO</Eyebrow><h2>De una idea a un mueble listo para presentar.</h2><p>Aprendé el proceso para desarrollar una propuesta de mobiliario de forma ordenada y profesional.</p><Link className="diana-course-link" href={`/${locale}/insights`}>Quiero información del curso <ArrowRight size={18}/></Link></div><div className="diana-course-list"><div><span>01</span><b>Diseño desde cero en SketchUp</b></div><div><span>02</span><b>Despiece</b></div><div><span>03</span><b>Presupuesto</b></div><div><span>04</span><b>Presentación para el cliente</b></div></div></div>
+   <div className="shell diana-course-grid"><div><Eyebrow light>CURSO DE DISEÑO MOBILIARIO</Eyebrow><h2>Curso de diseño mobiliario</h2><p>Aprendé a desarrollar un proyecto de mobiliario desde cero, con herramientas y entregables aplicables a clientes reales.</p><Link className="diana-course-link" href={`/${locale}/insights`}>Quiero información del curso <ArrowRight size={18}/></Link></div><div className="diana-course-list"><div><span>01</span><b>Diseño desde cero en SketchUp</b></div><div><span>02</span><b>Despiece</b></div><div><span>03</span><b>Presupuesto</b></div><div><span>04</span><b>Presentación para el cliente</b></div></div></div>
   </section>
 
   <section className="shell diana-process"><div className="diana-section-heading"><Eyebrow>PROCESO</Eyebrow><h2>Simple, claro y acompañado.</h2></div><div className="diana-process-grid">{[['01','Conversamos','Nos contás qué necesitás.'],['02','Diseñamos','Definimos la propuesta.'],['03','Desarrollamos','Resolvemos planos y detalles.'],['04','Entregamos','Te presentamos el proyecto.']].map(([n,t,x])=><div key={n}><span>{n}</span><h3>{t}</h3><p>{x}</p></div>)}</div></section>
