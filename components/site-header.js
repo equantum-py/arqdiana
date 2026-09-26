@@ -8,13 +8,10 @@ import { copy, paths } from '../lib/content';
 import { sitePath } from '../lib/site-path';
 
 export function Brand() {
-  return <span className="brand"><span className="brand-mark" aria-hidden="true"><i/><i/><i/></span>forma<span className="brand-dot">®</span></span>;
+  return <span className="brand">ARQ<span className="brand-dot">.</span>DIANA</span>;
 }
 
-export function FooterLanguages() {
- const pathname = usePathname();
- return <div>{['en','tr'].map((language, i) => <span key={language}>{i > 0 && <span aria-hidden="true"> / </span>}<a href={sitePath(pathname.replace(/^\/(en|tr)(?=\/|$)/, `/${language}`))} hrefLang={language} lang={language}>{language === 'en' ? 'English' : 'Türkçe'}</a></span>)}</div>;
-}
+export function FooterLanguages() { return null; }
 
 export default function SiteHeader({ locale }) {
   const c = copy[locale];
@@ -22,8 +19,6 @@ export default function SiteHeader({ locale }) {
   const [open, setOpen] = useState(false);
   const toggle = useRef(null);
   const panel = useRef(null);
-  const other = locale === 'en' ? 'tr' : 'en';
-  const alternate = sitePath(pathname.replace(/^\/(en|tr)(?=\/|$)/, `/${other}`) + '/');
 
   useEffect(() => { setOpen(false); }, [pathname]);
   useEffect(() => {
@@ -46,16 +41,15 @@ export default function SiteHeader({ locale }) {
 
   return <header className="site-header">
     <div className="shell header-row">
-      <Link href={`/${locale}`} aria-label="Forma Studio"><Brand/></Link>
-      <nav className="desktop-nav" aria-label={locale === 'en' ? 'Main navigation' : 'Ana menü'}>
+      <Link href={`/${locale}`} aria-label="Arq. Diana G. Piñanez"><Brand/></Link>
+      <nav className="desktop-nav" aria-label={'Navegación principal'}>
         {paths.slice(0, 5).map((path, i) => <Link key={path} href={`/${locale}${path}`} aria-current={pathname === `/${locale}${path}` || (path && pathname.startsWith(`/${locale}${path}/`)) ? 'page' : undefined}>{c.nav[i]}</Link>)}
       </nav>
       <div className="header-actions">
-        <div className="language-switch" aria-label={locale === 'en' ? 'Language' : 'Dil'}><span aria-current="true">{locale.toUpperCase()}</span><span className="language-divider">/</span><a href={alternate} lang={other} hrefLang={other} aria-label={other === 'en' ? 'Switch to English' : 'Türkçeye geç'}>{other.toUpperCase()}</a></div>
         <Link className="button button-small header-contact" href={`/${locale}/contact`}>{c.start}<ArrowUpRight size={16}/></Link>
         <button ref={toggle} className="menu-toggle" aria-expanded={open} aria-controls="mobile-navigation" aria-label={open ? c.close : c.menu} onClick={() => setOpen(!open)}>{open ? <X/> : <Menu/>}</button>
       </div>
     </div>
-    {open && <nav ref={panel} id="mobile-navigation" className="mobile-nav" aria-label={locale === 'en' ? 'Mobile navigation' : 'Mobil menü'}>{paths.map((path, i) => <Link key={path} href={`/${locale}${path}`} aria-current={pathname === `/${locale}${path}` ? 'page' : undefined} onClick={() => setOpen(false)}><span className="mobile-number">0{i+1}</span>{c.nav[i]}<ArrowUpRight/></Link>)}<p>FORMA STUDIO · İSTANBUL</p></nav>}
+    {open && <nav ref={panel} id="mobile-navigation" className="mobile-nav" aria-label={'Navegación móvil'}>{paths.map((path, i) => <Link key={path} href={`/${locale}${path}`} aria-current={pathname === `/${locale}${path}` ? 'page' : undefined} onClick={() => setOpen(false)}><span className="mobile-number">0{i+1}</span>{c.nav[i]}<ArrowUpRight/></Link>)}<p>ARQ. DIANA G. PIÑANEZ · PARAGUAY</p></nav>}
   </header>;
 }
