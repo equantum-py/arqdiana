@@ -1,9 +1,9 @@
-import { ArrowUpRight, HardHat, MapPinned, PenTool, Plus, Ruler } from 'lucide-react';
+import { ArrowUpRight, BookOpen, Home, Plus, Ruler } from 'lucide-react';
 import Link from 'next/link';
 import { copy } from '../lib/content';
 import { Eyebrow } from './ui';
 
-const icons = [MapPinned, PenTool, HardHat, Ruler];
+const icons = [Home, Ruler, BookOpen];
 
 export default function NumberedServices({ locale }) {
   const c = copy[locale];
