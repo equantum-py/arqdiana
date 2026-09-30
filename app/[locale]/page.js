@@ -29,11 +29,23 @@ export default async function Home({ params }) {
    </div>
   </section>
 
-  <section className="shell diana-services">
-   <div className="diana-section-heading"><Eyebrow>SERVICIOS</Eyebrow><h2>Lo que hago</h2><p>Tres líneas de trabajo para acompañarte desde el diseño de un proyecto hasta la formación profesional.</p></div>
-   <div className="diana-service-grid">{services.map(([Icon,title,text],i)=><Link href={`/${locale}/services#service-${i+1}`} className="diana-service-card" key={title}><div><span>0{i+1}</span><Icon size={25} strokeWidth={1.4}/></div><h3>{title}</h3><p>{text}</p><b>Ver servicio <ArrowRight size={16}/></b></Link>)}</div>
-  </section>
-
+  <section className="diana-services-editorial">
+    <div className="shell diana-services-editorial-container">
+     <div className="diana-services-editorial-heading">
+      <Eyebrow>SERVICIOS</Eyebrow>
+      <h2>Diseño, planos<br/>y formación.</h2>
+      <p>Tres líneas de trabajo para desarrollar proyectos, documentar ideas y aprender herramientas de arquitectura y diseño.</p>
+ </div>
+     <div className="diana-services-editorial-grid">
+      <div className="diana-services-editorial-image">
+       <Picture src={photos.architecture} alt="Composición editorial de arquitectura y diseño" eager/>
+ </div>
+      <div className="diana-services-editorial-list">
+{services.map(([Icon,title,text],i)=><Link href={`/${locale}/services#service-${i+1}`} className="diana-services-editorial-item" key={title}><div className="diana-services-editorial-item-header"><span className="diana-services-editorial-number">0{i+1}</span><h3>{title}</h3><span className="diana-services-editorial-plus">+</span></div><p>{text}</p></Link>)}
+ </div>
+ </div>
+ </div>
+ </section>
   <section className="diana-feature">
    <div className="shell diana-feature-grid">
     <div className="diana-feature-image"><Picture src={photos.detail} alt="Referencia de interiorismo residencial"/></div>
