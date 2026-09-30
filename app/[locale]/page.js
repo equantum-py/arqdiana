@@ -22,7 +22,7 @@ export default async function Home({ params }) {
      <Eyebrow>ARQ. DIANA G. PIÑANEZ · PARAGUAY</Eyebrow>
      <h1>Arquitectura que empieza con una idea.</h1>
      <p>Diseño, planos y formación para convertir ideas en proyectos concretos.</p>
-     <div className="diana-actions"><Link className="diana-primary" href={`/${locale}/contact`}>Quiero empezar mi proyecto <ArrowRight size={18}/></Link><Link className="diana-secondary" href={`/${locale}/projects`}>Ver trabajos</Link></div>
+     <div className="diana-actions"><Link className="diana-primary" href={`/${locale}/contact`}>Quiero empezar mi proyecto <ArrowRight size={18}/></Link><Link className="diana-secondary" href={`/${locale}/services`}>Ver servicios</Link></div>
      <div className="diana-specialties"><span>Diseño</span><span>Planos</span><span>Cursos</span></div>
     </div>
     <div className="diana-hero-image"><Picture src={photos.hero} alt="Referencia visual de arquitectura residencial" eager/><div className="diana-image-note"><span>ARQUITECTURA + DISEÑO</span><b>Espacios pensados para vos.</b></div></div>
