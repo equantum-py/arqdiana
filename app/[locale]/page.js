@@ -1,4 +1,4 @@
-import { ArrowRight, BookOpen, Check, Home as HomeIcon, PencilRuler, Ruler, Wrench } from 'lucide-react';
+import { ArrowRight, BookOpen, Check, Home as HomeIcon, Ruler } from 'lucide-react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { copy, pageMetadata, locales, photos } from '../../lib/content';
@@ -11,27 +11,26 @@ export default async function Home({ params }) {
  if (!locales.includes(locale)) notFound();
  const c = copy[locale];
  const services = [
-  [HomeIcon,'Diseño de vivienda','Diseñamos tu casa desde cero, desde la distribución hasta la propuesta final.'],
-  [Wrench,'Reformas y ampliaciones','Transformamos y ampliamos espacios existentes para nuevas necesidades.'],
-  [PencilRuler,'Diseño de mobiliario','Muebles pensados para tu espacio, uso, medidas y estilo.'],
-  [Ruler,'Planos municipales','Documentación y planos para acompañar correctamente tu proyecto.']
+  [HomeIcon,'Diseño','Diseño arquitectónico, reformas, ampliaciones y soluciones de mobiliario pensadas para cada proyecto.'],
+  [Ruler,'Planos','Planos y documentación técnica para desarrollar y llevar tu proyecto a una etapa concreta.'],
+  [BookOpen,'Cursos y capacitaciones','Formación práctica para aprender herramientas y procesos aplicables a arquitectura y diseño.']
  ];
  return <main className="diana-home">
   <section className="diana-hero">
    <div className="shell diana-hero-grid">
     <div className="diana-hero-copy">
      <Eyebrow>ARQ. DIANA G. PIÑANEZ · PARAGUAY</Eyebrow>
-     <h1>Diseñamos tu espacio desde la primera idea.</h1>
-     <p>Arquitectura residencial, reformas, mobiliario y planos municipales con acompañamiento directo.</p>
+     <h1>Arquitectura que empieza con una idea.</h1>
+     <p>Diseño, planos y formación para convertir ideas en proyectos concretos.</p>
      <div className="diana-actions"><Link className="diana-primary" href={`/${locale}/contact`}>Quiero empezar mi proyecto <ArrowRight size={18}/></Link><Link className="diana-secondary" href={`/${locale}/projects`}>Ver trabajos</Link></div>
-     <div className="diana-specialties"><span>Viviendas</span><span>Reformas</span><span>Mobiliario</span><span>Planos</span></div>
+     <div className="diana-specialties"><span>Diseño</span><span>Planos</span><span>Cursos</span></div>
     </div>
     <div className="diana-hero-image"><Picture src={photos.hero} alt="Referencia visual de arquitectura residencial" eager/><div className="diana-image-note"><span>ARQUITECTURA + DISEÑO</span><b>Espacios pensados para vos.</b></div></div>
    </div>
   </section>
 
   <section className="shell diana-services">
-   <div className="diana-section-heading"><Eyebrow>SERVICIOS</Eyebrow><h2>Servicios de arquitectura</h2><p>Elegí lo que necesitás y conversemos directamente sobre tu proyecto.</p></div>
+   <div className="diana-section-heading"><Eyebrow>SERVICIOS</Eyebrow><h2>Lo que hago</h2><p>Tres líneas de trabajo para acompañarte desde el diseño de un proyecto hasta la formación profesional.</p></div>
    <div className="diana-service-grid">{services.map(([Icon,title,text],i)=><Link href={`/${locale}/services#service-${i+1}`} className="diana-service-card" key={title}><div><span>0{i+1}</span><Icon size={25} strokeWidth={1.4}/></div><h3>{title}</h3><p>{text}</p><b>Ver servicio <ArrowRight size={16}/></b></Link>)}</div>
   </section>
 
@@ -48,7 +47,7 @@ export default async function Home({ params }) {
   </section>
 
   <section className="diana-course">
-   <div className="shell diana-course-grid"><div><Eyebrow light>CURSO DE DISEÑO MOBILIARIO</Eyebrow><h2>Curso de diseño mobiliario</h2><p>Aprendé a desarrollar un proyecto de mobiliario desde cero, con herramientas y entregables aplicables a clientes reales.</p><Link className="diana-course-link" href={`/${locale}/insights`}>Quiero información del curso <ArrowRight size={18}/></Link></div><div className="diana-course-list"><div><span>01</span><b>Diseño desde cero en SketchUp</b></div><div><span>02</span><b>Despiece</b></div><div><span>03</span><b>Presupuesto</b></div><div><span>04</span><b>Presentación para el cliente</b></div></div></div>
+   <div className="shell diana-course-grid"><div><Eyebrow light>CURSOS Y CAPACITACIONES</Eyebrow><h2>Aprendé arquitectura y diseño de forma práctica.</h2><p>Cursos y capacitaciones pensados para estudiantes, profesionales y personas que quieren incorporar herramientas concretas a su trabajo.</p><Link className="diana-course-link" href={`/${locale}/insights`}>Ver cursos y capacitaciones <ArrowRight size={18}/></Link></div><div className="diana-course-list"><div><span>01</span><b>Herramientas de diseño</b></div><div><span>02</span><b>Procesos y documentación</b></div><div><span>03</span><b>Aplicación práctica</b></div><div><span>04</span><b>Capacitaciones personalizadas</b></div></div></div>
   </section>
 
   <section className="shell diana-process"><div className="diana-section-heading"><Eyebrow>PROCESO</Eyebrow><h2>Simple, claro y acompañado.</h2></div><div className="diana-process-grid">{[['01','Conversamos','Nos contás qué necesitás.'],['02','Diseñamos','Definimos la propuesta.'],['03','Desarrollamos','Resolvemos planos y detalles.'],['04','Entregamos','Te presentamos el proyecto.']].map(([n,t,x])=><div key={n}><span>{n}</span><h3>{t}</h3><p>{x}</p></div>)}</div></section>
