@@ -359,12 +359,13 @@
 .home-modern .editorial-project-card .project-meta { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:5px 12px; max-width:190px; color:#81907d; font:9px 'Plus Jakarta Sans',sans-serif; }
 .home-modern .editorial-project-card .project-meta span { display:inline-flex; align-items:center; gap:5px; }
 .home-modern-services { background:#edf0e7; padding:clamp(90px,11vw,150px) 0; }
-.home-modern-services .shell { display:grid; grid-template-columns:minmax(230px,.7fr) minmax(0,1.3fr); gap:clamp(40px,9vw,150px); }
-.home-modern-services-intro h2 { max-width:380px; font-size:clamp(44px,4.8vw,72px); line-height:.92; }
-.home-modern-services-intro>p { max-width:260px; margin-top:24px; color:#758273; font-size:12px; line-height:1.65; }
-.home-modern-service-list { border-top:1px solid #cfd8c8; }
+.home-modern-services .shell { display:flex; flex-direction:column; align-items:center; text-align:center; }
+.home-modern-services-intro { width:100%; display:flex; flex-direction:column; align-items:center; }
+.home-modern-services-intro h2 { max-width:760px; font-size:clamp(44px,4.8vw,72px); line-height:.92; margin:0 auto; }
+.home-modern-services-intro>p { max-width:560px; margin:24px auto 0; color:#758273; font-size:12px; line-height:1.65; }
+.home-modern-service-list { width:min(100%,980px); margin:clamp(45px,6vw,75px) auto 0; border-top:1px solid #cfd8c8; text-align:left; }
 .home-modern-service { border-bottom:1px solid #cfd8c8; }
-.home-modern-service summary { min-height:90px; display:grid; grid-template-columns:38px 24px minmax(0,1fr) 24px; align-items:center; gap:16px; list-style:none; cursor:pointer; }
+.home-modern-service summary { min-height:110px; display:grid; grid-template-columns:42px 28px minmax(0,1fr) 24px; align-items:center; gap:20px; list-style:none; cursor:pointer; }
 .home-modern-service summary::-webkit-details-marker { display:none; }
 .home-modern-service-number { color:#84927e; font:10px 'Plus Jakarta Sans',sans-serif; letter-spacing:.1em; }
 .home-modern-service-title { display:flex; align-items:baseline; gap:18px; }
@@ -373,7 +374,7 @@
 .home-modern-service-plus { justify-self:end; transition:transform .25s ease; }
 .home-modern-service[open] .home-modern-service-plus { transform:rotate(45deg); }
 .home-modern-service>p { max-width:620px; margin:0 0 22px 94px; color:#718071; font-size:12px; line-height:1.65; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-.home-modern-services-link { grid-column:2; margin-top:26px; }
+.home-modern-services-link { margin-top:28px; }
 .home-modern-testimonial { padding:clamp(90px,12vw,170px) 0; }
 .home-modern-testimonial-grid { display:grid; grid-template-columns:minmax(220px,.75fr) minmax(0,1.25fr); align-items:end; gap:clamp(34px,9vw,145px); }
 .home-modern-testimonial-image { height:clamp(280px,34vw,500px); overflow:hidden; }
@@ -404,7 +405,7 @@ body:has(.home-modern) .site-footer .footer-kicker { max-width:260px; }
  .home-modern .editorial-project-card,.home-modern .editorial-project-card-2,.home-modern .editorial-project-card-3,.home-modern .editorial-project-card-4 { grid-column:span 6; margin-top:0; }
  .home-modern .editorial-project-card-1 { grid-column:span 7; }
  .home-modern .editorial-project-card-2 { grid-column:8 / span 5; }
- .home-modern-services .shell { gap:45px; }
+ .home-modern-services .shell { gap:0; }
  .home-modern-service-title { display:block; }
  .home-modern-service-title em { display:block; margin-top:4px; }
 }
